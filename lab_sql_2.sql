@@ -18,9 +18,9 @@ CREATE TABLE cars (
 
 
 CREATE TABLE customers (
-  num_id INT AUTO_INCREMENT PRIMARY KEY,
+  num_id int auto_increment PRIMARY KEY,
   customer_id INT,
-  name VARCHAR(100),
+  name varchar(100),
   phone_number VARCHAR(100),
   email VARCHAR(100),
   address VARCHAR(100),
@@ -34,7 +34,7 @@ CREATE TABLE customers (
 
 CREATE TABLE salespersons (
   num_id INT AUTO_INCREMENT PRIMARY KEY,
-  staff_id INT,
+  staff_id int,
   name VARCHAR(100),
   store VARCHAR(100)
 );
@@ -42,8 +42,7 @@ CREATE TABLE salespersons (
 
 
 CREATE TABLE invoices (
-  num_id INT AUTO_INCREMENT PRIMARY KEY,
-  invoice_number INT,
+  num_id INT AUTO_INCREMENT PRIMARY KEY,invoice_number INT,
   date DATE,
   car_id INT,
   customer_id INT,
@@ -52,9 +51,8 @@ CREATE TABLE invoices (
 
 
 
-INSERT INTO cars (car_id, manufacturer, model, color)
-VALUES
-  (1, 'Volkswagen', 'Tiguan', 'Blue'),
+insert into cars (car_id, manufacturer, model, color)
+values(1, 'Volkswagen', 'Tiguan', 'Blue'),
   (2, 'Peugeot', 'Rifter', 'Red'),
   (3, 'Ford', 'Fusion', 'White'),
   (4, 'Toyota', 'RAV4', 'Silver'),
@@ -62,16 +60,14 @@ VALUES
   (6, 'Volvo', 'V60 Cross Country', 'Gray');
 
 
-INSERT INTO customers (customer_id, name, phone_number, email, address, city, state, country, postal_code)
-VALUES
-  (10001, 'Pablo Picasso', '+34 636 17 63 82', NULL, 'Paseo de la Chopera, 14', 'Madrid', 'Madrid', 'Spain', 28045),
+Insert into customers (customer_id, name, phone_number, email, address, city, state, country, postal_code)
+values(10001, 'Pablo Picasso', '+34 636 17 63 82', NULL, 'Paseo de la Chopera, 14', 'Madrid', 'Madrid', 'Spain', 28045),
   (20001, 'Abraham Lincoln', '+1 305 907 7086', NULL, '120 SW 8th St', 'Miami', 'Florida', 'United States', 33130),
   (30001, 'Napoléon Bonaparte', '+33 1 79 75 40 00', NULL, '40 Rue du Colisée', 'Paris', 'Île-de-France', 'France', 75008);
 
 
-INSERT INTO salespersons (staff_id, name, store)
-VALUES
-  (00001, 'Petey Cruiser', 'Madrid'),
+insert into salespersons (staff_id, name, store)
+values(00001, 'Petey Cruiser', 'Madrid'),
   (00002, 'Anna Sthesia', 'Barcelona'),
   (00003, 'Paul Molive', 'Berlin'),
   (00004, 'Gail Forcewind', 'Paris'),
@@ -81,8 +77,7 @@ VALUES
   (00008, 'Shonda Leer', 'São Paulo');
 
 
-INSERT INTO invoices (invoice_number, date, car_id, customer_id, staff_id)
-VALUES
-  (852399038, '2018-08-22', 1, 1, 3),
+insert into invoices (invoice_number, date, car_id, customer_id, staff_id)
+values(852399038, '2018-08-22', 1, 1, 3),
   (731166526, '2018-12-31', 3, 3, 5),
   (271135104, '2019-01-22', 2, 2, 7);
